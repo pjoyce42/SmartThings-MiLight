@@ -14,7 +14,7 @@
  *
  */
 metadata {
-	definition (name: "MiLight Controller", namespace: "cloudsyjared", author: "Jared Jensen", singleInstance: false) {
+	definition (name: "MiLight Controller", namespace: "pjoyce42", author: "Jared Jensen", singleInstance: false) {
 		capability "Switch Level"
 		capability "Actuator"
 		capability "Switch"

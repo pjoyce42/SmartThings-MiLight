@@ -1,7 +1,7 @@
 definition(
-    name: "MiLight Manager",
+    name: "MiLight Manager mod",
     singleInstance: true,
-    namespace: "cloudsyjared",
+    namespace: "pjoyce42",
     author: "Jared Jensen",
     description: "Adds SmartThings support for MiLight / Easybulb / LimitlessLED bulbs",
     category: "My Apps",
@@ -25,7 +25,7 @@ def mainPage() {
             }
         }
         section("") {
-            app(name: "childHubs", appName: "MiThings", namespace: "cloudsyjared", title: "Add New Hub...", multiple: true)
+            app(name: "childHubs", appName: "MiThings", namespace: "pjoyce42", title: "Add New Hub...", multiple: true)
             input "isDebug", "bool", title: "Enable debug logging", defaultValue: false, required: false, displayDuringSetup: true
         }
     }
@@ -81,7 +81,7 @@ def buildColorPath(hex, evt) {
 
 def httpCall(path, mac, evt) {
     def params = [
-        uri:  'http://lights.cloudsy.com/v1/',
+        uri:  '192.168.1.26:50000',
         path: "$path",
         contentType: 'application/json',
         headers: [MAC:"$mac"]
